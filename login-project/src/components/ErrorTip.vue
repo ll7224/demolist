@@ -1,5 +1,7 @@
 <template>
-  <div>123123</div>
+  <div>
+    
+  </div>
 </template>
 <script>
 export default {};

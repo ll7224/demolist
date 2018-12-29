@@ -13,14 +13,12 @@
           <Icon :type="pwdIcon" slot="prefix" @click="showPwd"/>
         </Input>
       </div>
-      <div>
-        <label>验证码</label>
-        <Input type="text" placeholder="Please Enter Verification Code"></Input>
-      </div>
+      <Verification></Verification>
     </Card>
   </div>
 </template>
 <script>
+import Verification from "@/components/Verification";
 export default {
   data() {
     return {
@@ -33,6 +31,9 @@ export default {
     pwdIcon() {
        return this.pwdType === "password" ? "md-eye-off" : "md-eye"
     }
+  },
+  components: {
+    Verification
   },
   methods: {
     showPwd() {
