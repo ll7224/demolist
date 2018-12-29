@@ -8,7 +8,7 @@
 </template>
 <script>
 import normalTips from "./normalTips";
-import { TIPS } from "@/utils/constants";
+import { TIPS } from "@/utils/constant";
 export default {
   data() {
     return {
@@ -75,15 +75,15 @@ export default {
         // alert("请输入验证码");
         this.$Message.error("请输入验证码");
         this.$emit("codeStatus",false);
-        this.tips = TIPS.CLOSE
+        this.tips = "md-close-circle"
       } else if (this.inputCode.toUpperCase() != this.verification) {
-        this.tips = TIPS.CLOSE
+        this.tips = "md-close-circle"
         this.$Message.error("输入的验证码有误")
         this.generateCode();
         this.inputCode = "";
          this.$emit("codeStatus",false);
       } else {
-        this.tips = TIPS.CHECKED
+        this.tips = "md-checkmark-circle"
         this.$Message.success("验证码正确")
          this.$emit("codeStatus",true);
       }

@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import registerCard from "@/components/register/RegisterCard"
+import registerCard from "@/components/register/Register"
 export default {
   components: {
     registerCard

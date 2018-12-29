@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <Card>
+      <div>
+        <Button>返回</Button>
+      </div>
+      <div class="">
+        <label>账号:</label>
+        <Input placeholder="Please Enter Name" v-model="account">
+          <Icon type="md-person" slot="prefix"/>
+        </Input>
+      </div>
+      <div>
+        <label>账号:</label>
+        <Input placeholder="Please Enter Name" v-model="account">
+          <Icon type="md-person" slot="prefix"/>
+        </Input>
+      </div>
+    </Card>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      account: ""
+    }
+  }
+};
+</script>
+<style lang="stylus" scoped>
+
+</style>

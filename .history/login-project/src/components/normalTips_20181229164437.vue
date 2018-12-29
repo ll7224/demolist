@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     iconStyle() {
-      return this.tips === TIPS.CHECKED ? "icon-check" : "icon-close"
+      return this.tips === "md-checkmark-circle" ? "icon-check" : "icon-close"
     }
   }
 }

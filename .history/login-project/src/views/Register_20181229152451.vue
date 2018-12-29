@@ -2,18 +2,12 @@
   <div class="login-wrapper">
     <Row class="login-container">
       <Col span="24">
-        <registerCard></registerCard>
       </Col>
     </Row>
   </div>
 </template>
 <script>
-import registerCard from "@/components/register/RegisterCard"
-export default {
-  components: {
-    registerCard
-  }
-};
+export default {};
 </script>
 <style lang="stylus" scoped>
 .login-wrapper

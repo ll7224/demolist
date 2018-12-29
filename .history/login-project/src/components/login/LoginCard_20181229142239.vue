@@ -16,7 +16,7 @@
       <Verification @codeStatus="acceptCode"></Verification>
       <div class="btn-wrapper">
         <Button type="primary" @click="login">登录</Button>
-        <Button class="resBtn" @click="goRegister">注册</Button>
+        <Button class="resBtn">注册</Button>
       </div>
       <div class="forget">
         <router-link to="/register">忘记密码？</router-link>
@@ -57,9 +57,6 @@ export default {
     },
     acceptCode(data) {
       this.checkCodestatus = data;
-    },
-    goRegister() {
-      this.$router.push({path: "/register"})
     }
   }
 };

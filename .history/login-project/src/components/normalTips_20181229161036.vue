@@ -4,8 +4,6 @@
   </div>
 </template>
 <script>
-import { TIPS } from "@/utils/constants";
-
 export default {
   props: {
     tips: {
@@ -14,7 +12,7 @@ export default {
   },
   computed: {
     iconStyle() {
-      return this.tips === TIPS.CHECKED ? "icon-check" : "icon-close"
+      return this.tips === "md-checkmark-circle" ? "icon-check" : "icon-close"
     }
   }
 }
