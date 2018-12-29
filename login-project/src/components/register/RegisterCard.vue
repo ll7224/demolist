@@ -13,20 +13,25 @@
       </div>
       <div class="reg-row">
         <label>密码:</label><br/>
-        <Input placeholder="Please Enter PassWord" :type="pwdType" v-model="password" class="inputStyle">
+        <Input 
+          placeholder="Please Enter PassWord" 
+          :type="pwdType" 
+          v-model="password" 
+          class="inputStyle"
+          @on-blur="checkPassword">
           <Icon :type="pwdIcon" slot="prefix" @click="showPwd"/>
         </Input>
       </div>
       <div class="reg-btn">
-        <Button type="primary">注册</Button>
-        <Button type="error" class="replaceBtn">重置</Button>
+        <Button type="primary" @click="registerUser">注册</Button>
+        <Button type="error" class="replaceBtn" @click="replace">重置</Button>
       </div>
     </Card>
   </div>
 </template>
 <script>
 import normalTips from "../normalTips";
-import { TIPS } from "@/utils/constants";
+import { TIPS,ERROR } from "@/utils/constants";
 export default {
   data() {
     return {
@@ -58,14 +63,40 @@ export default {
     checkAccount() {
       let lastAccount = localStorage.getItem("account");
       if(this.account === '') {
-        this.$Message.error("请输入账号")
+        this.$Message.error(ERROR.REQUIRED)
         this.tips = TIPS.CLOSE
+         return false
       }else if(this.account === lastAccount) {
-        this.$Message.error("账号相同")
+        this.$Message.error(ERROR.ACCOUNT)
         this.tips = TIPS.CLOSE
+        return false
       }else {
         this.tips = TIPS.CHECKED
+        return true
       }
+    },
+    checkPassword() {
+      if(this.password === '') {
+        this.$Message.error(ERROR.PASSWORD);
+        return false
+      }else {
+        return true
+      }
+    },
+    registerUser() {
+      if(this.checkAccount() && this.checkPassword()) {
+         localStorage.setItem("account",this.account);
+         localStorage.setItem("password",this.password);
+         this.$Message.success("注册成功")
+         this.replace()
+      }else {
+        return false
+      }
+    },
+    replace() {
+      this.account = "",
+      this.password = "",
+      this.tips = null
     }
   },
   created() {
