@@ -1,4 +1,4 @@
-# login-project
+# 登录和注册功能练习
 
 ## Project setup
 ```
