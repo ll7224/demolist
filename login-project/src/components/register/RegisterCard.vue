@@ -31,7 +31,7 @@
 </template>
 <script>
 import normalTips from "../normalTips";
-import { TIPS,ERROR } from "@/utils/constants";
+import { TIPS, ERROR } from "@/utils/constants";
 export default {
   data() {
     return {
@@ -39,7 +39,7 @@ export default {
       account: "",
       password: "",
       tips: null
-    }
+    };
   },
   components: {
     normalTips
@@ -58,51 +58,49 @@ export default {
       }
     },
     backLogin() {
-      this.$router.push({ path: "/" })
+      this.$router.push({ path: "/" });
     },
     checkAccount() {
       let lastAccount = localStorage.getItem("account");
-      if(this.account === '') {
-        this.$Message.error(ERROR.REQUIRED)
-        this.tips = TIPS.CLOSE
-         return false
-      }else if(this.account === lastAccount) {
-        this.$Message.error(ERROR.ACCOUNT)
-        this.tips = TIPS.CLOSE
-        return false
-      }else {
-        this.tips = TIPS.CHECKED
-        return true
+      if (this.account === "") {
+        this.$Message.error(ERROR.REQUIRED);
+        this.tips = TIPS.CLOSE;
+        return false;
+      } else if (this.account === lastAccount) {
+        this.$Message.error(ERROR.ACCOUNT);
+        this.tips = TIPS.CLOSE;
+        return false;
+      } else {
+        this.tips = TIPS.CHECKED;
+        return true;
       }
     },
     checkPassword() {
-      if(this.password === '') {
+      if (this.password === "") {
         this.$Message.error(ERROR.PASSWORD);
-        return false
-      }else {
-        return true
+        return false;
+      } else {
+        return true;
       }
     },
     registerUser() {
-      if(this.checkAccount() && this.checkPassword()) {
-         localStorage.setItem("account",this.account);
-         localStorage.setItem("password",this.password);
-         this.$Message.success("注册成功")
-         this.replace()
-      }else {
-        return false
+      if (this.checkAccount() && this.checkPassword()) {
+        localStorage.setItem("account", this.account);
+        localStorage.setItem("password", this.password);
+        this.$Message.success("注册成功");
+        this.replace();
+      } else {
+        return false;
       }
     },
     replace() {
-      this.account = "",
-      this.password = "",
-      this.tips = null
+      (this.account = ""), (this.password = ""), (this.tips = null);
     }
   },
   created() {
-    localStorage.setItem("account","123"),
-    localStorage.setItem("password","123")
-  },
+    localStorage.setItem("account", "123"),
+      localStorage.setItem("password", "123");
+  }
 };
 </script>
 <style lang="stylus" scoped>

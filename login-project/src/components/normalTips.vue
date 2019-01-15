@@ -14,10 +14,10 @@ export default {
   },
   computed: {
     iconStyle() {
-      return this.tips === TIPS.CHECKED ? "icon-check" : "icon-close"
+      return this.tips === TIPS.CHECKED ? "icon-check" : "icon-close";
     }
   }
-}
+};
 </script>
 <style lang="stylus" scoped>
 .tips

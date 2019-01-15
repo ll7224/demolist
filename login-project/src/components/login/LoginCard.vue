@@ -52,14 +52,12 @@ export default {
         this.pwdType = "password";
       }
     },
-    login() {
-
-    },
+    login() {},
     acceptCode(data) {
       this.checkCodestatus = data;
     },
     goRegister() {
-      this.$router.push({path: "/register"})
+      this.$router.push({ path: "/register" });
     }
   }
 };
@@ -70,4 +68,3 @@ export default {
   .resBtn
     margin-left: 20px
 </style>
-
