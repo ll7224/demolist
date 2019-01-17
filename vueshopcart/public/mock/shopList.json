@@ -1,39 +1,63 @@
 {
   "success": true,
   "data": {
-     "shopList": [
-       {
-         "shopTitle": "CONCORD 嘻哈国潮棉服男新款冬季加厚多口袋工装外套宽松潮牌",
-         "shopColor": "藏青色（预售1月18日）",
-         "shopSize": "L",
-         "shopPrice": "549.00",
-         "shopSalePrice": "436.00",
-         "count": "1",
-         "imgUrl": "../src/assets/shopItem_01.jpg"
+     "shopAllList": [
+       { 
+         "shopName": "CONCORD EVENT",
+         "shopList": [
+           { 
+             "shopItemId": 1,
+             "shopTitle": "CONCORD 嘻哈国潮棉服男新款冬季加厚多口袋工装外套宽松潮牌",
+             "shopColor": "藏青色（预售1月18日）",
+             "shopSize": "L",
+             "shopPrice": "549.00",
+             "shopSalePrice": "436.00",
+             "count": "1",
+             "imgUrl": "../src/assets/shopItem_01.jpg"
+           }
+        ]
        },
        {
-         "shopTitle": "【潘老板游戏王】游戏王 1008 【暗黑新生风暴】- 日文（亚洲版）",
-         "shopColor": "港版1008原盒",
-         "shopPrice": "300.00",
-         "shopSalePrice": "280.00",
-         "count": "1",
-         "imgUrl": "../src/assets/shopItem_02.jpg"
+         "shopName": "盘老板游戏王卡店",
+         "shopList": [
+           {
+             "shopItemId": 2,
+             "shopTitle": "【潘老板游戏王】游戏王 1008 【暗黑新生风暴】- 日文（亚洲版）",
+             "shopColor": "港版1008原盒",
+             "shopPrice": "300.00",
+             "shopSalePrice": "280.00",
+             "count": "1",
+             "imgUrl": "../src/assets/shopItem_02.jpg"
+           }
+         ]
        },
        {
-         "shopTitle": "NZXT/恩杰 H700i H700 ATX中塔钢化面板侧透 简约时尚电脑机箱",
-         "shopColor": "H700 亚光白",
-         "shopPackge": "官方标配",
-         "shopPrice": "899.00",
-         "count": "1",
-         "imgUrl": "../src/assets/shopItem_03.jpg"
+         "shopName": "张三电脑店",
+         "shopList": [
+           {
+             "shopItemId": 3,
+             "shopTitle": "NZXT/恩杰 H700i H700 ATX中塔钢化面板侧透 简约时尚电脑机箱",
+             "shopColor": "H700 亚光白",
+             "shopPackge": "官方标配",
+             "shopPrice": "899.00",
+             "count": "1",
+             "imgUrl": "../src/assets/shopItem_03.jpg"
+           }
+         ]
        },
        {
-         "shopTitle": "【超忆卡牌游戏王】 AC03/20LC 20周年红碎盒 原盒",
-         "shopColor": "港版（需要全额付款，提前收货，包不砍单）",
-         "shopPrice": "330.00",
-         "shopSalePrice": "330.00",
-         "count": "1",
-         "imgUrl": "../src/assets/shopItem_04.jpg"
+         "shopName": "李四游戏王卡牌店",
+         "shopList": [
+           {
+             "shopItem": 4,
+             "shopTitle": "【超忆卡牌游戏王】 AC03/20LC 20周年红碎盒 原盒",
+             "shopColor": "港版（需要全额付款，提前收货，包不砍单）",
+             "shopPrice": "330.00",
+             "shopSalePrice": "330.00",
+             "count": "1",
+             "imgUrl": "../src/assets/shopItem_04.jpg"
+           }
+         ]
        }
      ]
   }

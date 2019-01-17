@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Home from "@/views/Home.vue";
+import shopList from "@/views/shopList";
 
 Vue.use(Router);
 
@@ -11,7 +12,21 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
+      children: [
+        {
+          path: "/shopList",
+          name: "shop-list",
+          component: shopList,
+          children: [
+            {
+              path: "/shopList/AllShopCart",
+              name: "all-shop-list-cart",
+              component: () => import("../components/ALLShopCart.vue")
+            }
+          ]
+        }
+      ]
     }
     // {
     //   path: "/about",

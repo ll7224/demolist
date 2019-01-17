@@ -1,14 +1,11 @@
 <template>
   <div class="home">
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-import axios from 'axios';
+import axios from "axios";
 export default {
-  name: "home",
-  created() {
-    axios.get('/api/shopList.json')
-  },
+  name: "home"
 };
 </script>
