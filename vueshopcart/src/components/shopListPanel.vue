@@ -7,8 +7,7 @@
 export default {
   props: {
     shopList: {
-      type: Array,
-      default: []
+      type: Array
     }
   }
 };
